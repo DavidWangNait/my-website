@@ -1,0 +1,7 @@
+body{
+    background-color: #003366;
+}
+header,div{
+    background-color: white;
+    border-radius: 25px;
+}
