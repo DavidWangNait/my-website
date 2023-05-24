@@ -15,7 +15,12 @@ header{
 }
 #Myexp{
     background-color: #3399ff;
+    color:white;
 }
 #Mypro{
     background-color: #0066cc;
+    color:white;
+}
+a{
+    color:white;
 }
