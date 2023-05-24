@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Calculator</title>
+    <script>
+        window.onload=()=>{
+        const button=document.querySelector("[name=cap]")
+        const v=document.querySelector("[name=vol]")
+        const a=document.querySelector("[name=ah]")
+        const c= document.querySelector("[name=custom]")
+        var cap;
+        v.onchange=()=>{
+            if(isNaN(v.value)|isNaN(a.value))//error
+            {
+                console.log("Error")
+            }
+            else//calculation
+            {
+                console.log(v.value)
+                console.log(a.value)
+                cap=parseInt(v.value)*parseInt(a.value)
+                console.log(cap)
+                document.querySelector("[name=cap]").value=cap
+                caltime();
+            }
+        }
+        a.onchange=()=>{
+            if(isNaN(v.value)|isNaN(a.value))//error
+            {
+                console.log("Error")
+            }
+            else//calculation
+            {
+                console.log(v.value)
+                console.log(a.value)
+                cap=parseInt(v.value)*parseInt(a.value)
+                console.log(cap)
+                document.querySelector("[name=cap]").value=cap
+                caltime();
+            }
+        }
+        button.onchange=()=>{
+            caltime();
+        }
+        c.onchange=()=>{
+            caltime();
+        }
+        function caltime(){
+          var cap=parseInt(document.querySelector("[name=cap]").value);
+          document.getElementById("phone").innerHTML=cap/15;
+          document.getElementById("LED").innerHTML=cap/9;
+          document.getElementById("laptop").innerHTML=cap/70;
+          document.getElementById("laptop2").innerHTML=cap/20;
+          document.getElementById("fan").innerHTML=cap/30;
+          document.getElementById("TV").innerHTML=cap/100;
+          document.getElementById("heater").innerHTML=cap/500;
+          document.getElementById("cust").innerHTML=cap/parseInt(document.querySelector("[name=custom]").value);
+        }
+        }
+    </script>
+</head>
+<body>
+    <section><h1>Battery Calculator</h1></section>
+    <p>Voltage:<input type="text" name="vol"></p>
+    <p>Ah:<input type="text" name="ah"></p>
+    <p>Capacity in Wh:<input type="text" name="cap"></p>
+    <p>Phone(15Wh):<div id="phone"></div>times</p>
+    <p>LED Lamp(9W):<div id="LED"></div>hours</p>
+    <p>Laptop(70Wh):<div id="laptop"></div>times</p>
+    <p>Laptop(20W):<div id="laptop2"></div>hours</p>
+    <p>Fan(30W):<div id="fan"></div>hours</p>
+    <p>TV(100W):<div id="TV"></div>hours</p>
+    <p>Heater(500W):<div id="heater"></div>hours</p>
+    <p>Custom:<input type="text" name="custom"><div id="cust"></div>hours</p>
+</body>
+</html>
