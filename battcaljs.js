@@ -5,7 +5,7 @@ window.onload=()=>{
     const c= document.querySelector("[name=custom]")
     var cap;
     v.onchange=()=>{
-        if(isNaN(v.value)|isNaN(a.value))//error
+        if(v.value==""||a.value=="")//error
         {
             console.log("Error")
         }
@@ -20,7 +20,7 @@ window.onload=()=>{
         }
     }
     a.onchange=()=>{
-        if(isNaN(v.value)|isNaN(a.value))//error
+        if(v.value==""||a.value=="")//error
         {
             console.log("Error")
         }
