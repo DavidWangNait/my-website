@@ -1,7 +1,22 @@
+var show=0;
+
 window.onload=()=>{
     
     document.onscroll=()=>{
-        $("#Myexp").fadeIn(1500);
-        $("#Mypro").fadeIn(3000);
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //alert("bottom!"); 
+            if(show==0){
+                show++;
+                $("#Myexp").fadeIn(1500);
+            }
+            else if(show==1){
+                show++;
+                $("#Mypro").fadeIn(1500);
+            }
+            else{
+
+            }
+        }
+       
     }
 }
