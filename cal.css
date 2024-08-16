@@ -1,0 +1,39 @@
+body{
+    background-color: olive;
+    }
+    header{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    }
+    iframe{
+    margin-top: 20px;
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    }
+    #desc{
+        background-color: white;
+        margin-top: 20px;
+        padding: 20px;
+    }
+@media only screen and (min-width: 600px){
+    body{
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+    }
+    header{
+        grid-column: 1/4;
+    }
+    iframe{
+        grid-column: 2/3;
+        margin-top: 20px;
+        background-color: white;
+    }
+    footer{
+        grid-column: 1/4;
+    }
+    #desc{
+        grid-column: 2/3;
+    }
+}

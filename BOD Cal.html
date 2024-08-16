@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOD Test Calculator</title>
+    <script src="BOD Cal.js">
+    </script>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        input,span,div,button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+        <span>Carboy Size(ml):</span>
+        <input onchange="Click()" id="carboysize" value="300">
+        <span>Sample Size(ml):</span>
+        <input onchange="Click()" id="samplesize">
+        <span>DO start(mg/l):</span>
+        <input onchange="Click()" id="dostart">
+        <span>DO end(mg/l):</span>
+        <input onchange="Click()" id="doend">
+        <div id = "result"></div>
+</body>
+</html>
