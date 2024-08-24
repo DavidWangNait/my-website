@@ -51,7 +51,7 @@ nav{
         grid-column: 1;
     }
     .Hnav:hover{
-        background-color: #003366;
+        background-color: #0080ff !important;
         color:white;
     }
     div:hover:not(#out){
