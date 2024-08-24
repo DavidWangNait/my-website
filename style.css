@@ -57,10 +57,10 @@ grid-template-columns: auto auto;
     grid-column: 1/4;
     text-align: center;
 }
-
 h1,h2{
     text-align: center;
 }
 img{
     width: 50px;
 }
+

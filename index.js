@@ -3,7 +3,7 @@ var barshow=0;
 
 window.onload=()=>{
     
-    document.onscroll=()=>{
+    /*document.onscroll=()=>{
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
             //alert("bottom!"); 
             if(show==0){
@@ -18,23 +18,26 @@ window.onload=()=>{
 
             }
         }
-    }
+    }*/
     document.querySelector("#nav").onclick=()=>
     {
+        //fade in
         if(barshow==0){
             $("div").css("grid-column","2/3");
             $("nav").fadeIn(1500);
             barshow=1;
         }
+        //fade out
         else{
-            barshow=2;
+            barshow=2;//hiding,prevent click agin
             $("nav").fadeOut(1500,function(){
-                $("div").css("grid-column","1/3");barshow=0;
+                $("div").css("grid-column","1/3");
+                barshow=0;
             });
             
         }
     }
-    document.querySelector("#skills").onclick=()=>{
+    /*document.querySelector("#skills").onclick=()=>{
         $("#Myexp").fadeIn(1500);
         $("#Mypro").fadeIn(1500);
         document.querySelector("#Myskl").scrollIntoView();
@@ -48,7 +51,7 @@ window.onload=()=>{
         $("#Myexp").fadeIn(1500);
         $("#Mypro").fadeIn(1500);
         document.querySelector("#Mypro").scrollIntoView();
-    }
+    }*/
 }
 
     
