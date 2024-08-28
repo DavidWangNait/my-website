@@ -22,16 +22,13 @@ nav{
 #out a{
     color: white;
 }
-
-.Hnav:hover{
+nav:hover,div:hover:not(#out){
     background-color: #0080ff !important;
     color:white;
 }
-div:hover:not(#out){
-    background-color: #0080ff !important;
-    color:white;
+div:hover a,nav:hover a{
+    color:white; 
 }
-
 @media screen and ( min-width : 800px)
 {
     body{
