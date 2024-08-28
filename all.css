@@ -16,13 +16,15 @@ nav{
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    bottom: 0;
 }
-
-
 #out a{
     color: white;
 }
-nav:hover,div:hover:not(#out){
+nav:hover,header:hover,div:hover:not(#out){
     background-color: #0080ff !important;
     color:white;
 }
@@ -44,9 +46,6 @@ div:hover a,nav:hover a{
     nav{
         grid-column: 1;
         grid-row: 2;
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top:0;
     }
     
 }
